@@ -16,7 +16,7 @@ startBtn.addEventListener('click', () =>{
         intro.classList.add('hidden');
         mainContent.classList.remove('hidden');
 
-        requestAnimationFrame(() =>{
+        requestAnimationFrame( () =>{
             mainContent.classList.add('visible');
             startAnimation();
         });
@@ -53,7 +53,7 @@ function createTreeHearts(count){
         
         treeContainer.appendChild(heart);
         
-        requestAnimationFrame((){
+        requestAnimationFrame(() =>{
             setTimeout(() =>{
                 heart.style.transform=`rotate(-45deg) scale(${0.7+Math.random()*0.5})`;
 
@@ -114,4 +114,5 @@ function updateTimer(){
 
     document.getElementById('time-elapsed').textContent = `${days}g : ${hours}o : ${minutes}m : ${seconds}s`;
 }
+
 
