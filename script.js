@@ -88,8 +88,8 @@ function typeWriterEffect(){
     }
 
     function typeDedication(){
-        if (j<dedicationText.length){
-            dedEl.innerHTML+=dedicationText.charAt(j);
+        if (j<testo.length){
+            dedEl.innerHTML+=testo.charAt(j);
             j++;
             setTimeout(typeDedication, 30);
         }else{
@@ -110,11 +110,12 @@ function showTimer(){
 
 function updateTimer(){
     const now=new Date();
-    const diff=now-startDate;
+    const diff=now-data;
     const days=Math.floor(diff/(1000*60*60*24));
     const hours=Math.floor((diff/(1000*60*60))%24);
     const minutes=Math.floor((diff/(1000*60))%60);
     const seconds=Math.floor((diff/1000)%60);
 
     document.getElementById('time-elapsed').innerText=`${days}g : ${hours}o : ${minutes}m : ${seconds}s`;
+
 }
